@@ -1,0 +1,51 @@
+﻿@model EDIServicesHelper.Models.Utils_GetProcessingDocs
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>EDI Service Utils</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Documents Process</h2>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Total)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Incoming)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.MinDoc)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.MinDate)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.MaxDoc)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.MaxDate)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Diff)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Senders)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.LastFileSent)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.Total)</td>
+                            <td>@Html.DisplayFor(model => model.Incoming)</td>
+                            <td>@Html.DisplayFor(model => model.MinDoc)</td>
+                            <td>@Html.DisplayFor(model => model.MinDate)</td>
+                            <td>@Html.DisplayFor(model => model.MaxDoc)</td>
+                            <td>@Html.DisplayFor(model => model.MaxDate)</td>
+                            <td>@Html.DisplayFor(model => model.Diff)</td>
+                            <td>@Html.DisplayFor(model => model.Senders)</td>
+                            <td>@Html.DisplayFor(model => model.LastFileSent)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

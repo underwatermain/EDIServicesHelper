@@ -1,0 +1,227 @@
+﻿@model EDIServicesHelper.Models.TransmissionInfo
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Transmission Trace</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col align-self-center">
+            @using (Html.BeginForm("Index", "EDIService", FormMethod.Post))
+            {
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-sm-5">
+                            <input type="number" class="form-control mx-sm-3" id="TransmissionID" aria-describedby="transmissionHelp" placeholder="Transmission ID" name="TransmissionID">
+                            <small id="transmissionHelp" class="form-text text-muted">Insert transmission # to trace the process.</small>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            }
+        </div>
+    </div>
+   
+    @if (Model.FileTransmission != null)
+    {
+        <div class="row">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="text-right" style="display: inline-block;float: right;">Status: <code>@Html.DisplayFor(model => model.FileTransmission.Status)</code></p>
+                        <strong>File Transmission Info: </strong> @Html.DisplayFor(model => model.FileTransmission.FileTransmissionID)
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6"><p>File Name: <code>@Html.DisplayFor(model => model.FileTransmission.FileName)</code></p></div>
+                            <div class="col-xs-6 col-md-6"><p>Doc Type: <code>@Html.DisplayFor(model => model.FileTransmission.DocumentTypeCode)</code></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6"><p>Success: @Html.DisplayFor(model => model.FileTransmission.Succesful)</p></div>
+                            <div class="col-xs-6 col-md-6"><p>Control Number: @Html.DisplayFor(model => model.FileTransmission.ControlNumber)</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6"><p>Processed Date: @Html.DisplayFor(model => model.FileTransmission.ProcessedDate)</p></div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        @Html.ActionLink("Download File", "DownloadFTFile", "EDIService", new { ft = @Html.DisplayFor(model => model.FileTransmission.FileTransmissionID) }, null)
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="text-right" style="display: inline-block;float: right;">Hub ID: <code>@Html.DisplayFor(model => model.FileTransmission.HubID)</code></p>
+                        <strong>Partnership</strong>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6">Source: <code>@Html.DisplayFor(model => model.Source.TradingPartnerID) - @Html.DisplayFor(model => model.Source.TradingPartnerName)</code></div>
+                            <div class="col-xs-6 col-md-6">Destination: <code>@Html.DisplayFor(model => model.Destination.TradingPartnerID) - @Html.DisplayFor(model => model.Destination.TradingPartnerName)</code></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="text-right" style="display: inline-block;float: right;">Sent Date: <code>@Html.DisplayFor(model => model.FileTransmission.SentDate)</code></p>
+                        <strong>Transmission Channel</strong>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6"><code>@Html.DisplayFor(model => model.TransmissionChannel.TransmissionChannelID) - @Html.DisplayFor(model => model.TransmissionChannel.Name)</code></div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <p class="text-right">Confirming FT: @Html.DisplayFor(model => model.FileTransmission.ConfirmingFT)</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>Documents</strong>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Doc ID</th>
+                                            <th scope="col">Channel ID</th>
+                                            <th scope="col">Doc Reference</th>
+                                            <th scope="col">Processing Date</th>
+                                            <th scope="col">Processed Date</th>
+                                            <th scope="col">ISA Number</th>
+                                            <th scope="col">GS Number</th>
+                                            <th scope="col">ST Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model.Documents != null)
+                                        {
+                                            foreach (var item in Model.Documents)
+                                            {
+                                                <tr>
+                                                    <td>@item.DocumentID</td>
+                                                    <td>@item.TransmissionChannelID</td>
+                                                    <td>@item.DocumentReference</td>
+                                                    <td>@item.ProcessingDate</td>
+                                                    <td>@item.ProcessedDate</td>
+                                                    <td>@item.ISANumber</td>
+                                                    <td>@item.GSNumber</td>
+                                                    <td>@item.STNumber</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>Action History</strong>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Doc Action ID</th>
+                                            <th scope="col">Doc ID</th>
+                                            <th scope="col">Channel ID</th>
+                                            <th scope="col">Processing Date</th>
+                                            <th scope="col">Processed Date</th>
+                                            <th scope="col">Successful</th>
+                                            <th scope="col">Message</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model.ActionHistories != null)
+                                        {
+                                            foreach (var item in Model.ActionHistories)
+                                            {
+                                                <tr>
+                                                    <td>@item.DocumentActionID - @item.DocumentAction.Action</td>
+                                                    <td>@item.DocumentID</td>
+                                                    <td>@item.TransmissionChannelID - @item.TransmissionChannel.Name</td>
+                                                    <td>@item.ProcessingDate</td>
+                                                    <td>@item.ProcessedDate</td>
+                                                    <td>@item.Successful</td>
+                                                    <td>@item.Message</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(model => model.FileTransmission.ErrorMessage)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.FileTransmission.ErrorMessage)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
+<div id="MyPopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <span id="lblError"></span>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnClosePopup" value="Close" class="btn btn-danger" data-dismiss="modal" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                $("#lblError").html('@Html.Raw(ViewBag.Message)');
+                $("#MyPopup").modal("show");
+            };
+    </script>
+}
+
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FileTransmission != null ? Model.FileTransmission.FileTransmissionID : 0 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

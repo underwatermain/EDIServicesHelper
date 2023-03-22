@@ -1,0 +1,1384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B099DB4C-6493-4E09-94A0-B70A8EECD810}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDIServicesHelper</RootNamespace>
+    <AssemblyName>EDIServicesHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EDIServiceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartnershipController.cs" />
+    <Compile Include="EDIDatabaseTools.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccessTokenQuickBook.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActionHistory.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Airport.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNAllowanceCharge.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNCarrierDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNCarrierDetailEquipment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNCarrierDetailRouting.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNDateTimeReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNMarksAndNumber.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNPackage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNPackageCarrierDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNPackageReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNPortOrTerminal.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNReferenceIdentification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNReferenceIdentificationLevelItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNShipment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNTempCartonNumber.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASNVesselIdentification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AzureSQLMaintenanceLog.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_ElementDescription.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_ElementFormula.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_Form.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_FormField.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_QualediFile.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BB_QualediMapping.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BGWindowsService.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_753Data_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_753RoutingDetailData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_810Data_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_810InvoiceitemsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_820JSON_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_830PDFData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_830PDFGetItemFromPo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850AS400Data_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFDataDropship_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFDataPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_GandA_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_Grafika_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_Otis_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_Otis_Test_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850PDFData_tst_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850POImportFile_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850S2KData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_850ShipInfoData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_855ItemsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_855POitemsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_856LabelData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_856ShipmentData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_856ShipmentItemsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_870ItemsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_875PDFData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940CSVDataSperantus_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940CSVData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940CSVSummaryData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940CSVTrackingData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940PDFDataPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_940SummaryData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945CarrierSearchCarrierID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945Qualifier_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WarehouseOrderSearchWOShipmentID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOAddressSearchWarehouseOrderID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WODateTimeReferenceSearchWarehouseOrderID_Qualifier_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOReferenceIdentificationN9_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOReferenceIdentificationSearchWarehouseOrderID_WOShipmentID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOSAItemSearchWOSAPackageID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOSAPackageSearchWOShippingAdviceID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOShipmentItemReferenceIdSearchWOShipmentItemID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_945WOShipmentPackageJoinWOShipmentItemSearchWOShipmentID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_CarrierShipmentSearchControlNumber_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_EDIFilterTradingPartner_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_EDIFilter_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_Get940CSVData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetDocsWithoutParsing_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetDocsWithoutProcessing_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetDocTypeInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetDocumentInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetMessageRaw_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetPOSummaryData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_GetProductListItem_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_IncomingDocumentReport_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_LabelsDataOne_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_LabelsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_AAFES_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Academy_S_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_AdvanceAutoParts_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_AffinionPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Affinion_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Amazon_Gatorwire_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Amazon_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Amazon_TPLink_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BassPro_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BBBdotCom_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BBB_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BB_US_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BestBuyMaster_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Bloomingdales_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Bluestem_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_BurlingtonCoats_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Cabelas_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_ChefsCatalogPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_CrystalArtPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Dillards_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_FrysTechnical_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Frys_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Harmons_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Harmons_Robo3D_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_HarrisTeeter_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_HBC_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_HouzzPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_HudsonBay_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_IndigoBooks_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_JacmelJpent_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Kordsa_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_LampPlus_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_LifeworksJpent_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_LordAndTaylor_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Macys_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_MartinreaMaster_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Martinrea_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Meijer_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_MicroCenter_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Nordstrom_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_ODepotPackingSlip_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_OfficeDepot_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_OnlySSCC_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_OnlyUCC_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Otis_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_PackingSlip_Zoro_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_PartyCity_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Sears_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_STZip_UPC_SSCC_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_TargetDVS_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Target_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_UPC_PartNumber_4x2_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Walgreens_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_WalmartCartonMarkings_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_WalmartIBBUSA_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_WalMartKidgalaxy_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_WalMart_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Wasserstrom_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_Wayfair_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OPDFLBL_WilliamsSonoma_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_Outgoing810DocumentReport_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_Outgoing856DocumentReport_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_OutgoingDocumentReport_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_PackingSlipData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_PDFDataLufthansa_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_RiedelBypassPOs_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_SelectReferenceIdentificationN9_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_ShipInfoColumnsData_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_TradingPartnerSearchCode_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BG_TradingPartnerSearchTradingPartnerID_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Booking.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookingEvent.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookingItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookingItemTracking.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookingService.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carrier.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarrierAlia.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarrierShipment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarrierShipmentStatu.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarrierShipmentStatusCode.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Channel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Client.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CodeTranslate.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactChannel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CountryState.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Currency.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Document.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentAction.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentElement.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentNotification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_AcknowledgedEDIs2_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_AcknowledgedEDIs_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_BillingReportFile_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_DocumentActivityTest2_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_DocumentActivity_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_Logs_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_NewDocumentActivityPerformance_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_OtisDashboard_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_Otis_Compliance_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_POActivity_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_POStatusTest_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_POStatus_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_POSubGrid_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_Sales_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_ServiceLevel_Partnership_SubGrid_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DSH_TestDocumentActivity_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ECW_Product.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ECW_Variation.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIFilter.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIFilterTradingPartner.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILog.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDIModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDIModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Environment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EquivalentItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EventNotificationShip.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FileTransmission.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FTPSetup.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetDocumentByName_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hub.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubContact.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubEDISegment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubSetup.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubSetupStep.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubSpecification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HubTradingPartner.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IncomingDocument.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IncomingDocumentDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IncommingEmailAccount.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IngramShipment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceAddressReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceAllowanceOrCharge.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceAllowanceTaxInfo.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceCarrierDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceDateTimeReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceItemPricingInformation.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceItemTaxInformation.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceReferenceIdentification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceShipmentSummary.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceSummaryTaxInfo.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceTermsOfSale.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemByPass.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LabelCartonNumber.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogEntry.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogEntryType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogSource.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MailNotification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MailTemplate.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MasterTradingPartner.cs" />
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageAction.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PackageType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Partnership.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnershipDocumentChannel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnershipDocumentType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnershipInfo.cs" />
+    <Compile Include="Models\POAAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POAAddressReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POABaseLineItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POABaseLineItemDescription.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POABaseLineItemName.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POABaseLinePricingInfo.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POAcknowledgment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POADateTimeReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POAddressReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POALineItemAcknowledgment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POAllowanceCharge.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POCarrierDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POCommunicationContact.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PODateTimeReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POExtendedReferenceInfo.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POInvoice.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POItemAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POItemDate.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POItemReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POItemSpecification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POMarkingPackagingLoading.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POPackage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POProductItemDescription.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POReferenceIdentification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POReferenceText.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PORelatedInstruction.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POSaleRequirement.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POSubItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POTermsDiscount.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POTransactionTotal.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProcessingDoc.cs" />
+    <Compile Include="Models\ProcessingQueue.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductList.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Protocol.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Provider.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProviderServiceArea.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProviderServiceType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseOrder.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseOrderStatu.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QBBillingAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QBClient.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QBInvoice.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QBInvoiceItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QBShipAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Quotation.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuotationProvider.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuotationServiceArea.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ResetPasswordRequest.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RoutingRequest.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RoutingRequestAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RoutingRequestShipmentInfo.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RRShipmentInfoAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RRShipmentInfoDateTime.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RRShipmentInfoOrderDetail.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SectionShip.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServiceLevel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServiceProvider.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServiceProviderContact.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shipper.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SlaveTradingPartner.cs" />
+    <Compile Include="Models\Split_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Task.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaskHistory.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Temp_Leads.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TextMessage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartner.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerCarrierAlia.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerContact.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerDivision.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerDocumentType.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerFileColumn.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerHubSetupStep.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerLabelColumn.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TradingPartnerServiceLevel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransmissionChannel.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransmissionInfo.cs" />
+    <Compile Include="Models\TS_GetDocumentActionsByPartnership_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_GetDocumentActions_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_GET_CarrierAlias_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_GET_Carriers_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_Get_TradingPartnersMS_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_Get_TradingPartners_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TS_Get_TransmissionChannels_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TurnAroundDocument.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TurnAroundElement.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserOperation.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserTradingPartner.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetAllPartnershipsInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetDuplicatedProductList_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetFailingChannels_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetFailingQueueChannels_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetInfoByDocument_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetInfoByFiletransmission_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetPOAndASNInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetPOInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetProcessedDocumentsInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetSupportedHubs_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_GetTradingPartnerInfo_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_ShowRecentDocumentsStatus_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utils_ShowRecentTransmissionsStatus_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ValidationRule.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwDSH_NewDocumentActivity.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwpoItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WarehouseOrder.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WEB_ElementDescriptionCreateKe_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WEB_ElementDescription_Result.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOAddress.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WODateTimeReference.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WONoteInstruction.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOReferenceIdentification.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOSAItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOSAPackage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOShipment.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOShipmentItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOShipmentItemReferenceId.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOShipmentPackage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WOShippingAdvice.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZASNLevelItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZASNLevelPackage.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\zInvoiceItem.cs">
+      <DependentUpon>EDIModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\EDIModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EDIModel.Context.cs</LastGenOutput>
+      <DependentUpon>EDIModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\EDIModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDIModel.edmx</DependentUpon>
+      <LastGenOutput>EDIModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\EDIModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EDIModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EDIModel.edmx.diagram">
+      <DependentUpon>EDIModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\EDIService\Index.cshtml" />
+    <Content Include="Views\Partnership\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49663</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49663/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

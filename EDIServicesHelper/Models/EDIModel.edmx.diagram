@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c05710179b340f5b2f16f8ed255b5e7" Name="Diagram1">
+        <EntityTypeShape EntityType="EdiServiceModel.AccessTokenQuickBook" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ActionHistory" Width="1.5" PointX="13.5" PointY="325.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.AddressType" Width="1.5" PointX="3.75" PointY="228.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Airport" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNAddress" Width="1.5" PointX="10.5" PointY="235.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNAllowanceCharge" Width="1.5" PointX="10.5" PointY="240.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNCarrierDetail" Width="1.5" PointX="16.5" PointY="252.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNCarrierDetailEquipment" Width="1.5" PointX="10.5" PointY="264.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNCarrierDetailRouting" Width="1.5" PointX="10.5" PointY="268.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNDateTimeReference" Width="1.5" PointX="10.5" PointY="272.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNItem" Width="1.5" PointX="26.25" PointY="293.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNMarksAndNumber" Width="1.5" PointX="18.75" PointY="243.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNPackage" Width="1.5" PointX="16.5" PointY="245.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNPackageCarrierDetail" Width="1.5" PointX="18.75" PointY="257" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNPackageReference" Width="1.5" PointX="18.75" PointY="261.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNPortOrTerminal" Width="1.5" PointX="12.75" PointY="287.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNReferenceIdentification" Width="1.5" PointX="10.5" PointY="284.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNReferenceIdentificationLevelItem" Width="1.5" PointX="15" PointY="299.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNShipment" Width="1.5" PointX="8.25" PointY="249" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNTempCartonNumber" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ASNVesselIdentification" Width="1.5" PointX="10.5" PointY="287.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.AzureSQLMaintenanceLog" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_ElementDescription" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_ElementFormula" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_Form" Width="1.5" PointX="5.25" PointY="254.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_FormField" Width="1.5" PointX="16.5" PointY="262.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_QualediFile" Width="1.5" PointX="15" PointY="238.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BB_QualediMapping" Width="1.5" PointX="17.25" PointY="238.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BGWindowsService" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Booking" Width="1.5" PointX="7.5" PointY="367.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BookingEvent" Width="1.5" PointX="12" PointY="359.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BookingItem" Width="1.5" PointX="9.75" PointY="364.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BookingItemTracking" Width="1.5" PointX="15" PointY="358.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.BookingService" Width="1.5" PointX="12" PointY="363.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Carrier" Width="1.5" PointX="6" PointY="238.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CarrierAlia" Width="1.5" PointX="5.25" PointY="252.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CarrierShipment" Width="1.5" PointX="7.5" PointY="276.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CarrierShipmentStatu" Width="1.5" PointX="12.75" PointY="273.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CarrierShipmentStatusCode" Width="1.5" PointX="10.5" PointY="302.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Channel" Width="1.5" PointX="5.25" PointY="247" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Client" Width="1.5" PointX="5.25" PointY="264.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CodeTranslate" Width="1.5" PointX="10.5" PointY="280" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Contact" Width="1.5" PointX="5.25" PointY="271.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ContactChannel" Width="1.5" PointX="7.5" PointY="336" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Country" Width="1.5" PointX="6.75" PointY="223.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.CountryState" Width="1.5" PointX="9" PointY="223" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Currency" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Document" Width="1.5" PointX="11.25" PointY="250.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.DocumentAction" Width="1.5" PointX="10.5" PointY="323.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.DocumentElement" Width="1.5" PointX="19.5" PointY="252.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.DocumentNotification" Width="1.5" PointX="5.25" PointY="258.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.DocumentReference" Width="1.5" PointX="13.5" PointY="261.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.DocumentType" Width="1.5" PointX="6" PointY="242.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ECW_Product" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ECW_Variation" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.EDIFilter" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.EDIFilterTradingPartner" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.EDILog" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Environment" Width="1.5" PointX="11.25" PointY="246.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.EquivalentItem" Width="1.5" PointX="5.25" PointY="293.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.EventNotificationShip" Width="1.5" PointX="10.5" PointY="291.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.FileTransmission" Width="1.5" PointX="12.5" PointY="312.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.FTPSetup" Width="1.5" PointX="5.25" PointY="296.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Hub" Width="1.5" PointX="5.25" PointY="311" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubContact" Width="1.5" PointX="7.5" PointY="311.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubEDISegment" Width="1.5" PointX="10.5" PointY="308.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubSetup" Width="1.5" PointX="7.5" PointY="318" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubSetupStep" Width="1.5" PointX="9.75" PointY="317.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubSpecification" Width="1.5" PointX="7.5" PointY="321" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.HubTradingPartner" Width="1.5" PointX="10.5" PointY="276.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.IncomingDocument" Width="1.5" PointX="14.75" PointY="315.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.IncomingDocumentDetail" Width="1.5" PointX="17" PointY="316.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.IncommingEmailAccount" Width="1.5" PointX="5.25" PointY="316.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.IngramShipment" Width="1.5" PointX="5.25" PointY="319.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Invoice" Width="1.5" PointX="18.75" PointY="280.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceAddress" Width="1.5" PointX="21" PointY="244.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceAddressReference" Width="1.5" PointX="23.25" PointY="245.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceAllowanceOrCharge" Width="1.5" PointX="21" PointY="240.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceAllowanceTaxInfo" Width="1.5" PointX="23.25" PointY="240.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceCarrierDetail" Width="1.5" PointX="21" PointY="271.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceDateTimeReference" Width="1.5" PointX="21" PointY="291.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceItem" Width="1.5" PointX="28.5" PointY="285" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceItemPricingInformation" Width="1.5" PointX="30.75" PointY="288.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceItemTaxInformation" Width="1.5" PointX="30.75" PointY="299.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceReferenceIdentification" Width="1.5" PointX="21" PointY="294.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceShipmentSummary" Width="1.5" PointX="21" PointY="297" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceSummaryTaxInfo" Width="1.5" PointX="21" PointY="300.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.InvoiceTermsOfSale" Width="1.5" PointX="21" PointY="303.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ItemByPass" Width="1.5" PointX="5.25" PointY="323.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.LabelCartonNumber" Width="1.5" PointX="16.5" PointY="257.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.LogEntry" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.LogEntryType" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.LogSource" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.MailNotification" Width="1.5" PointX="3" PointY="267.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.MailTemplate" Width="1.5" PointX="5.25" PointY="327.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Message" Width="1.5" PointX="15.75" PointY="279" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.MessageAction" Width="1.5" PointX="13.5" PointY="248.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PackageType" Width="1.5" PointX="14.25" PointY="245.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Partnership" Width="1.5" PointX="5.25" PointY="330.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PartnershipDocumentChannel" Width="1.5" PointX="13.5" PointY="256.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PartnershipDocumentType" Width="1.5" PointX="7.5" PointY="332.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAAddress" Width="1.5" PointX="17" PointY="303.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAAddressReference" Width="1.5" PointX="17" PointY="296.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POABaseLineItem" Width="1.5" PointX="17" PointY="322.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POABaseLineItemDescription" Width="1.5" PointX="19.25" PointY="320.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POABaseLineItemName" Width="1.5" PointX="19.25" PointY="323.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POABaseLinePricingInfo" Width="1.5" PointX="19.25" PointY="326.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAcknowledgment" Width="1.5" PointX="14.75" PointY="310.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POADateTimeReference" Width="1.5" PointX="17" PointY="327.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAddress" Width="1.5" PointX="24" PointY="249.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAddressReference" Width="1.5" PointX="26.25" PointY="249" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POALineItemAcknowledgment" Width="1.5" PointX="22.25" PointY="319.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POAllowanceCharge" Width="1.5" PointX="24" PointY="256.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POCarrierDetail" Width="1.5" PointX="24" PointY="261.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POCommunicationContact" Width="1.5" PointX="26.25" PointY="252.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PODateTimeReference" Width="1.5" PointX="24" PointY="266.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POExtendedReferenceInfo" Width="1.5" PointX="24" PointY="269.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POInvoice" Width="1.5" PointX="27" PointY="278.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POItem" Width="1.5" PointX="24" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POItemAddress" Width="1.5" PointX="29.25" PointY="281.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POItemDate" Width="1.5" PointX="26.25" PointY="281.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POItemReference" Width="1.5" PointX="26.25" PointY="284.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POItemSpecification" Width="1.5" PointX="26.25" PointY="287.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POMarkingPackagingLoading" Width="1.5" PointX="24" PointY="290.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POPackage" Width="1.5" PointX="24" PointY="293.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POProductItemDescription" Width="1.5" PointX="24" PointY="297.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POReferenceIdentification" Width="1.5" PointX="24" PointY="300.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POReferenceText" Width="1.5" PointX="26.25" PointY="270" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PORelatedInstruction" Width="1.5" PointX="24" PointY="303.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POSaleRequirement" Width="1.5" PointX="24" PointY="307.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POSubItem" Width="1.5" PointX="29.25" PointY="271.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POTermsDiscount" Width="1.5" PointX="24" PointY="310.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.POTransactionTotal" Width="1.5" PointX="24" PointY="315.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ProductList" Width="1.5" PointX="5.25" PointY="341.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Protocol" Width="1.5" PointX="9" PointY="232.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Provider" Width="1.5" PointX="5.25" PointY="348.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ProviderServiceArea" Width="1.5" PointX="9.75" PointY="353.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ProviderServiceType" Width="1.5" PointX="7.5" PointY="361.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PurchaseOrder" Width="1.5" PointX="21.75" PointY="274.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.PurchaseOrderStatu" Width="1.5" PointX="11.25" PointY="232.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QBBillingAddress" Width="1.5" PointX="3" PointY="198.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QBClient" Width="1.5" PointX="0.75" PointY="245.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QBInvoice" Width="1.5" PointX="3" PointY="202" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QBInvoiceItem" Width="1.5" PointX="5.25" PointY="202.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QBShipAddress" Width="1.5" PointX="3" PointY="206.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Quotation" Width="1.5" PointX="7.5" PointY="374.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QuotationProvider" Width="1.5" PointX="12" PointY="367.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.QuotationServiceArea" Width="1.5" PointX="9.75" PointY="374.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ResetPasswordRequest" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RoutingRequest" Width="1.5" PointX="15.75" PointY="285.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RoutingRequestAddress" Width="1.5" PointX="18" PointY="288.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RoutingRequestShipmentInfo" Width="1.5" PointX="18" PointY="310" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RRShipmentInfoAddress" Width="1.5" PointX="20.25" PointY="308.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RRShipmentInfoDateTime" Width="1.5" PointX="20.25" PointY="312.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.RRShipmentInfoOrderDetail" Width="1.5" PointX="29" PointY="294.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.SectionShip" Width="1.5" PointX="10.5" PointY="295.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ServiceLevel" Width="1.5" PointX="6" PointY="234.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ServiceProvider" Width="1.5" PointX="11.25" PointY="222.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ServiceProviderContact" Width="1.5" PointX="13.5" PointY="222.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Shipper" Width="1.5" PointX="5.25" PointY="369.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.sysdiagram" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Task" Width="1.5" PointX="7.5" PointY="324.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TaskHistory" Width="1.5" PointX="9.75" PointY="332.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.Temp_Leads" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TextMessage" Width="1.5" PointX="18.75" PointY="276.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartner" Width="1.5" PointX="3" PointY="242.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerAddress" Width="1.5" PointX="6" PointY="226.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerCarrierAlia" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerContact" Width="1.5" PointX="11.25" PointY="259" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerDivision" Width="1.5" PointX="5.25" PointY="376.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerDocumentType" Width="1.5" PointX="8.25" PointY="242.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerFileColumn" Width="1.5" PointX="8.25" PointY="260.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerHubSetupStep" Width="1.5" PointX="13" PointY="281" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerLabelColumn" Width="1.5" PointX="5.25" PointY="389.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TradingPartnerServiceLevel" Width="1.5" PointX="14.25" PointY="253" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TransmissionChannel" Width="1.5" PointX="5.25" PointY="395.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TurnAroundDocument" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.TurnAroundElement" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.User" Width="1.5" PointX="5.25" PointY="403.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.UserOperation" Width="1.5" PointX="7.5" PointY="404" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.UserTradingPartner" Width="1.5" PointX="10.5" PointY="328.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ValidationRule" Width="1.5" PointX="19.5" PointY="236.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WarehouseOrder" Width="1.5" PointX="32" PointY="277.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOAddress" Width="1.5" PointX="34.25" PointY="277.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WODateTimeReference" Width="1.5" PointX="34.25" PointY="282.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WONoteInstruction" Width="1.5" PointX="34.25" PointY="285.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOReferenceIdentification" Width="1.5" PointX="36.5" PointY="273.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOSAItem" Width="1.5" PointX="41" PointY="302.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOSAPackage" Width="1.5" PointX="38.75" PointY="291.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOShipment" Width="1.5" PointX="34.25" PointY="262.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOShipmentItem" Width="1.5" PointX="38.75" PointY="260.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOShipmentItemReferenceId" Width="1.5" PointX="41" PointY="263.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOShipmentPackage" Width="1.5" PointX="36.5" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.WOShippingAdvice" Width="1.5" PointX="36.5" PointY="290.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ZASNLevelItem" Width="1.5" PointX="12.75" PointY="298.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ZASNLevelPackage" Width="1.5" PointX="10.5" PointY="299.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.zInvoiceItem" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.ProcessingQueue" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.vwDSH_NewDocumentActivity" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdiServiceModel.vwpoItem" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="EdiServiceModel.FK_ActionHistory_Document" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ActionHistory_DocumentAction" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ActionHistory_TransmissionChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerAddress_AddressType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNAddress_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNAllowanceCharge_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNCarrierDetail_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNCarrierDetail_PurchaseOrderID" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNCarrierDetailEquipment_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNCarrierDetailRouting_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNDateTimeReference_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNItem_ASNPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNItem_POItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNItem_ProductList" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_InvoiceItem_ASNItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNMarksAndNumbers_ASNPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNPackage_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNPackage_PackageType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNPackage_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNPackageCarrierDetail_ASNPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNPackageReference_ASNPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__ASNPortOr__ASNVe__1451E89E" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNReferenceIdentification_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__ASNRefere__ASNLe__163A3110" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_Carrier" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_ServiceLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_TradingPartner1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_TradingPartnerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_AdvanceShipNotice_TradingPartnerAddress1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNShipment_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ASNVesselIdentification_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_EventNotiShip_ASNShip" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_LabelCartonNumber_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_SectionShip_ASNShip" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ZASNLevelPackage_ASNShipment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_Form_BB_QualediFile" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_Form_DestTradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_Form_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_FormField_BB_Form" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_FormField_BB_QualediMapping" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BB_QualediMapping_BB_QualediFile" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentE__Quale__231F2AE2" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ValidationRule_BB_QualediMapping" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Booking_Shipper" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingItem_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingItemService_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingEvent_BookingItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingEvent_DestinationProvider" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingEvent_OriginProvider" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingItemTracking_BookingItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingItemTracking_Provider" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_BookingItemService_ProviderServiceArea" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ServiceLevel_Carrier" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOShippingAdviceID_Carrier" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_TradingPartnerID_CarrierAlias" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CarrierSh__Carri__090A5324" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CarrierSh__Exter__0539C240" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CarrierSh__FileT__062DE679" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CarrierSh__Inter__07220AB2" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_FileTransmission_997" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_CarrierShipmentStatusCode" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Channel_Enviroment" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Channel_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_MessageAction_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PartnershipDocumentChannel_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Client_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CodeTrans__Tradi__0DCF0841" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__CodeTransla__Hub__0EC32C7A" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Contact_ContactChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartner_Contact" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TransmissionChannel_ContactChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_CountryState_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_HubContact_CountryState" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ServiceProvider_CountryState" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerContact_CountryState" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentE__Docum__2136E270" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Document_DestTP" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Document_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Document_SourceTP" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_DocumentReference_Document" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_DocumentAction_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_DocumentAction_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_DocumentAction_SourceTP" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_DocumentAction_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentE__Paren__222B06A9" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentN__DestT__47FBA9D6" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentN__Docum__46136164" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentN__MailN__451F3D2B" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__DocumentN__Sourc__4707859D" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__IncomingD__Docum__33008CF0" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_FileTransmission_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_HubEDISegment_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_MessageAction_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerFileColumn_DocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__ECW_Varia__Produ__288DEB75" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Enviroment_Protocol" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Enviroment_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__Equivalen__Desti__1A94D1D9" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__Equivalen__Sourc__19A0ADA0" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FileTrans__DestT__20E1DCB5" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FileTrans__HubID__19169DBB" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FileTrans__Sourc__22CA2527" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FileTrans__Tradi__1A0AC1F4" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__IncomingD__FileT__33F4B129" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAcknowl__FileT__66D536B1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__PurchaseO__FileT__5DCBBABB" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__WOShippin__FileT__00750D23" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_FileTransmission_TransChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_IncomingDocument_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Invoice_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POALineIAck_FileTransID" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RoutingRequest_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TextMessage_FileTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FTPSetup__DestTP__5AD97420" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__FTPSetup__Source__5BCD9859" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__Hub__TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__HubSetup__HubID__2D47B39A" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__HubSpecif__HubID__2F2FFC0C" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__HubTradin__HubID__20B7BF83" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_HubContact_Hub" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_HubEDISegment_Hub" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__HubSetupS__HubSe__2E3BD7D3" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.HubSetupStep_TradingPartnerp_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__HubTradin__Tradi__21ABE3BC" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.HubID_TradingPartnersID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.WarehouseOrder_HubID_TradingPartnersID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__IncomingD__Incom__34E8D562" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_IncommingEmailAcount_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_IngramShipment_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceAd__Invoi__267098D9" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceAl__Invoi__2764BD12" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceCa__Invoi__2B354DF6" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceDa__Invoi__2C29722F" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceRe__Invoi__2D1D9668" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceSh__Invoi__2E11BAA1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceSu__Invoi__2F05DEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceTe__Invoi__2FFA0313" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Invoice_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Invoice_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Invoice_TradingPartnerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_InvoiceItem_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POInvoice_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_InvoiceAddressReference_InvoiceAddressReference" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvAllowa__Invoi__24885067" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceBa__Invoi__294D0584" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__InvoiceBa__Invoi__2A4129BD" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_InvoiceItem_InvoiceItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__ItemByPass__DestTradingpartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ItemByPass_SourceTradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__LabelCart__Tradi__57FD0775" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_LabelCartonNumber_WOShipmentPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_LogEntry_LogEntryType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__MailTempl__DestT__0CA5D9DE" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__MailTempl__Sourc__0BB1B5A5" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_TradingPartner1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Message_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_MessageAction_PurchaseOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_MessageAction_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WShipmnetPackage_PackageType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__PartnerSh__Maste__216BEC9A" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__PartnerSh__Slave__226010D3" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_Partnership" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PartnershipDocumentChannel_Master" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PartnershipDocumentChannel_Slave" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PartnershipDocumentChannel_TradingPartnerDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_TradingPartnerDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAAddres__POAck__679450C0" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAAddres__POAck__66A02C87" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POABaseLi__POABa__658C0CBD" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POABaseLi__POABa__668030F6" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POABaseLi__POABa__6774552F" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POABaseLi__POAck__65AC084E" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POALineIt__POABa__6B44E613" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAcknowl__Purch__35B2DC69" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POADateTi__POAck__64B7E415" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAddress__POAdd__3EFC4F81" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POCommuni__POAdd__6E2152BE" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POAddress_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POAllowan__Purch__388F4914" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POCarrier__Purch__39836D4D" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PODateTimeReference_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POExtende__Purch__3C5FD9F8" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POReferen__POExt__7993056A" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POInvoice_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POItem__Purchase__3D53FE31" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POItemRef__Purch__40306ADC" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POSubItem__POIte__7869D707" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POItemAddress_POItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POItemDate_POItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POItemSpecification_POItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POItemAddress_TradingPartnerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POMarking__Purch__3E48226A" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_POPackage_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POProduct__Purch__3F3C46A3" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POReferen__Purch__40306ADC" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__PORelated__Purch__4218B34E" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POSaleReq__Purch__430CD787" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POSubItem__Purch__795DFB40" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POTermsDi__Purch__4400FBC0" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__POTransac__Purch__44F51FF9" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ProductList_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOSAItem_ProductList" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Provider_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ProviderServiceArea_Provider" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ProviderServiceArea_ProviderServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QuotationProvider_ProviderServiceArea" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PurchaseOrder_PurchaseOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_PurchaseOrder_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RRShipmentInfoOrderDetail_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseOrder_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseOrder_PurchaseOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QBBillingAddress_QBClientID" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QBInvoice_QBClient" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QBShipAddressID_QBClientID" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartner_QBClient" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QBInvoiceItem_QBInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QuotationServiceArea_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Shipper" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_QuotationProvider_QuotationServiceArea" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RoutingRequest_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RoutingRequest_TradingPartner1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RoutingRequestAddress_RoutingRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RoutingRequestShipmentInfo_RoutingRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RRShipmentInfoAddress_RoutingRequestShipmentInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RRShipmentInfoDateTime_RoutingRequestShipmentInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_RRShipmentInfoOrderDetail_RoutingRequestShipmentInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerServiceLevel_ServiceLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_ServiceProviderContact_ServiceProvider" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Shipper_TradingPartner1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Task_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Task_DestTP" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_Task_SourceTP" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TaskHistory_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__TextMessa__Desti__05F8DC4F" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__TextMessa__Sourc__0504B816" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__TradingPa__Tradi__46DD686B" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__TradingPa__Tradi__6FAA73D4" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__TradingPa__Tradi__70C8B53F" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.fk_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerDivision_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerFileColumn_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerServiceLevel_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TransmissionChannel_DstTradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TransmissionChannel_SrcTradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_User_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_UserTradingPatner_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseOrder_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseShipment_TradingPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseShipment_TradingPartner1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_TradingPartnerAddress_TradingPartnerAddress1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseShipment_TradingPartnerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseShipmnet_TradingPartnerAddress1" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOShippingAdviceID_TradingPartnerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_UserOperation_User" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_UserTradingPatner_User" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WarehouseShipmnet_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOAddress_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WODateTimeReference_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WONoteInstructionID_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOReferenceIdentification_WarehouseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__WOReferen__WOShi__239F1926" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOSAItem_WOSAPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOSAItem_WOShipmentItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOSAPackage_WOShippingAdviceID" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__WOShippin__WOShi__60A82766" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WShipmnetPackage_WarehouseShipmnet" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOItemReferenceId_WOItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK_WOShipmentItem_WOShipmentItem" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.FK__ASNLevelI__ASNLe__0F8D3381" ManuallyRouted="false" />
+        <AssociationConnector Association="EdiServiceModel.ProviderService" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

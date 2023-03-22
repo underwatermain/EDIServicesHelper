@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Partnership Information</h1>
+    <small>Check last activity of the selected partnership</small>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-md-5">
+            <h5>Slave</h5>
+            <input class="form-control input-lg" type="text" placeholder="Client" id="SlaveName" name="SlaveName">
+            <input type="hidden" id="SlaveID" name="SlaveID">
+        </div>
+        <div class="col-xs-6 col-md-5">
+            <h5>Master</h5>
+            <input class="form-control input-lg" type="text" placeholder="Master" id="MasterName" name="MasterName">
+            <input type="hidden" id="MasterID" name="MasterID">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <button type="button" class="btn btn-primary btn-lg " style="float: right;margin-top: 1em;" id="load1" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Cargando Partnership">Buscar Partnership</button>
+        </div>
+    </div>
+</div>
+
+<div id="MyPopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <span id="lblError"></span>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnClosePopup" value="Close" class="btn btn-danger" data-dismiss="modal" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                $("#lblError").html('@Html.Raw(ViewBag.Message)');
+                $("#MyPopup").modal("show");
+            };
+    </script>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#SlaveName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("GetSlave", "Partnership")',
+                    type: "POST",
+                    datatype: "json",
+                    data: {
+                        slaveTerm: request.term,
+                        masterID : $("#MasterID").val()
+                    },
+                    success: function (data) {
+                        response($.map(data, function (val, item) {
+                            return {
+                                label: val.SlaveName,
+                                value: val.SlaveName,
+                                slaveId: val.SlaveID
+                            }
+                        }))
+                    }
+                })
+            },
+            select: function (event, ui) {
+                $("#SlaveID").val(ui.item.slaveId);
+            }
+        });
+
+        $("#MasterName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("GetMaster", "Partnership")',
+                    type: "POST",
+                    datatype: "json",
+                    data: {
+                        masterTerm: request.term,
+                        slaveID : $("#SlaveID").val()
+                    },
+                    success: function (data) {
+                        response($.map(data, function (val, item) {
+                            return {
+                                label: val.MasterName,
+                                value: val.MasterName,
+                                slaveId: val.MasterID
+                            }
+                        }))
+                    }
+                })
+            },
+            select: function (event, ui) {
+                $("#MasterID").val(ui.item.slaveId);
+            }
+        });
+
+        $('#load1').on('click', function () {
+            var $this = $(this);
+            $this.button('loading');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("SetViewBag", "Partnership")',
+                data: '{ value: "Hello Mudassar!"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "text",
+                success: function (r) {
+
+                },
+                complete: function (data) {
+                    console.log("funcion Ajax completa.");
+                    $this.button('reset');
+                }
+            });
+        });
+});
+</script>
